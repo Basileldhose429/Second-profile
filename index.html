@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basil Eldhose — Security Engineer</title>
+    <meta name="description" content="Basil Eldhose — Cybersecurity Engineer & Ethical Hacker. Breaking systems to make them stronger.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- CRT Global Overlay -->
+    <div class="crt-overlay" aria-hidden="true"></div>
+
+    <!-- Global glitch flicker bar -->
+    <div class="glitch-bar" id="glitch-bar" aria-hidden="true"></div>
+
+    <!-- ── LOADER ── -->
+    <div id="loader">
+        <div class="loader-inner">
+            <div class="loader-label">[ BOOTING SECURE OS v2.5.1 ]</div>
+            <div class="loader-hex" id="loader-hex">0x0000</div>
+            <div class="loader-num" id="loader-num">0</div>
+            <div class="loader-track">
+                <div class="loader-fill" id="loader-fill"></div>
+            </div>
+            <div class="loader-boot-log" id="loader-boot-log">
+                <span>&gt; AUTH MODULE LOADED</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── FULL-SCREEN NAV OVERLAY ── -->
+    <div id="nav-overlay" aria-hidden="true">
+        <ul class="nav-big-links">
+            <li><a href="#home" class="nav-link-item">HOME</a></li>
+            <li><a href="#intro" class="nav-link-item">ABOUT</a></li>
+            <li><a href="#services" class="nav-link-item">SERVICES</a></li>
+            <li><a href="#work" class="nav-link-item">WORK</a></li>
+            <li><a href="#contact" class="nav-link-item">CONTACT</a></li>
+        </ul>
+        <div class="nav-footer-info">
+            <a href="mailto:basileldhose429@gmail.com">basileldhose429@gmail.com</a>
+            <a href="tel:+919496002311">+91 9496002311</a>
+            <div class="nav-socials">
+                <a href="https://github.com/Basileldhose429" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/basil-eldhose-74204537b" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/1__basil_eldhose__1" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── STICKY HEADER ── -->
+    <header id="site-header">
+        <div class="header-logo">BE</div>
+        <!-- Live hex status ticker -->
+        <div class="header-status" id="header-status" aria-label="System status">
+            <span class="status-dot"></span>
+            <span id="hex-ticker">0xBE :: SYS_OK</span>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- ═══════════════════════════════════ -->
+    <!--  SECTION 1 — HERO (SPIDER-MAN)     -->
+    <!-- ═══════════════════════════════════ -->
+    <section id="home" class="section hero-section">
+        <!-- Watermark text rows -->
+        <div class="hero-watermark" aria-hidden="true">
+            <p>I AM IRON MAN&nbsp;&nbsp;GENIUS BILLIONAIRE&nbsp;&nbsp;I AM IRON MAN&nbsp;&nbsp;GENIUS BILLIONAIRE</p>
+            <p>MARK L&nbsp;&nbsp;JARVIS ONLINE&nbsp;&nbsp;EXTREMIS ACTIVATED&nbsp;&nbsp;MARK L&nbsp;&nbsp;JARVIS ONLINE</p>
+            <p>I AM IRON MAN&nbsp;&nbsp;GENIUS BILLIONAIRE&nbsp;&nbsp;I AM IRON MAN&nbsp;&nbsp;GENIUS BILLIONAIRE</p>
+        </div>
+
+        <!-- Portrait with mask-reveal effect -->
+        <div class="hero-portrait-wrap" id="portrait-wrap">
+            <!-- Base: normal photo -->
+            <img class="portrait-base" src="profile.jpg" alt="Basil Eldhose">
+            <!-- Overlay: tinted red / mask look, revealed via clip-path -->
+            <div class="portrait-mask-layer" id="mask-layer">
+                <!-- Iron Man gold tint: sepia + warm amber hue-rotate -->
+                <img class="portrait-mask-img" src="profile.jpg" alt="" style="filter: sepia(1) saturate(4) hue-rotate(30deg) brightness(1.1) contrast(1.2);">
+            </div>
+            <!-- Scanline sweep -->
+            <div class="scanline" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero-bottom-bar">
+            <div class="hero-role">
+                <span class="badge">GENIUS · SECURITY ENGINEER · ETHICAL HACKER</span>
+            </div>
+            <div class="hero-name-block">
+                <h1 class="hero-name" data-text="BASIL ELDHOSE">BASIL ELDHOSE</h1>
+            </div>
+            <!-- Liquid Glass CTAs -->
+            <div class="hero-cta-row">
+                <a href="#work" class="liquid-btn" aria-label="View Projects">
+                    <span class="liquid-btn__glass"></span>
+                    <span class="liquid-btn__label">View Work ↗</span>
+                </a>
+                <a href="#contact" class="liquid-btn liquid-btn--outline" aria-label="Contact">
+                    <span class="liquid-btn__glass"></span>
+                    <span class="liquid-btn__label">Get In Touch</span>
+                </a>
+            </div>
+        </div>
+        <!-- Cyber corner decorators -->
+        <div class="cyber-corner tl" aria-hidden="true"><span>SYS://ROOT</span></div>
+        <div class="cyber-corner tr" aria-hidden="true"><span id="hero-clock">00:00:00</span></div>
+        <div class="cyber-corner bl" aria-hidden="true"><span>LAT: 10.2374 N</span></div>
+        <div class="cyber-corner br" aria-hidden="true"><span>THREAT_LVL: LOW</span></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ -->
+    <!--  SECTION 2 — INTRO / ABOUT         -->
+    <!-- ═══════════════════════════════════ -->
+    <section id="intro" class="section intro-section">
+        <!-- Floating parallax keywords -->
+        <div class="float-cloud" aria-hidden="true">
+            <span style="--tx:-60px;--ty:-80px;--r:-12deg">Zero-Trust</span>
+            <span style="--tx:200px;--ty:40px;--r:8deg">Penetration</span>
+            <span style="--tx:-140px;--ty:160px;--r:-6deg">Network</span>
+            <span style="--tx:320px;--ty:-60px;--r:14deg">Cloud</span>
+            <span style="--tx:60px;--ty:220px;--r:-10deg">Linux</span>
+            <span style="--tx:-220px;--ty:80px;--r:4deg">SIEM</span>
+        </div>
+
+        <div class="intro-inner container">
+            <p class="eyebrow" data-reveal>WHERE DEFENSE MEETS INNOVATION, PROTECTION STARTS.</p>
+            <h2 class="intro-name" data-reveal>BASIL ELDHOSE</h2>
+            <p class="intro-sub" data-reveal>
+                TRANSFORMING COMPLEX THREATS INTO IRONCLAD DEFENSES<br>
+                USING ZERO-TRUST ARCHITECTURE, PENETRATION TESTING,<br>
+                AND INCIDENT RESPONSE.
+            </p>
+        </div>
+    </section>
+
+    <!-- ── BINARY DATA STRIP ── -->
+    <div class="binary-strip" aria-hidden="true" id="binary-strip">
+        01001000 00100000 01000001 01000011 01001011 00100000 01010100 01001000 00100000 01010000 01001100 01000001 01001110 01000101 01010100
+    </div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!--  SECTION 2.6 — SHADER LINES        -->
+    <!-- ═══════════════════════════════════ -->
+    <section id="shader-section" class="section shader-section" aria-label="Shader animation">
+        <!-- Three.js canvas mounts here -->
+        <div id="shader-canvas" class="shader-canvas" aria-hidden="true"></div>
+
+        <!-- Overlay text -->
+        <div class="shader-overlay">
+            <p class="shader-eyebrow">[ DEEP SYSTEM ]</p>
+            <h2 class="shader-title">BASIL<br><span class="shader-title-sub">ELDHOSE</span></h2>
+            <p class="shader-tagline">Security Engineer &amp; Ethical Hacker</p>
+        </div>
+
+        <!-- Bottom corner glyphs -->
+        <div class="shader-corner shader-corner--tl" aria-hidden="true">SYS://RENDER</div>
+        <div class="shader-corner shader-corner--br" aria-hidden="true">GL_FRAG::ACTIVE</div>
+    </section>
+
+    <!-- ═══════════════════════════════════ -->
+    <!--  SECTION 2.5 — INTERACTIVE 3D      -->
+    <!-- ═══════════════════════════════════ -->
+    <section id="spline-section" class="section spline-section">
+        <div class="container">
+            <div class="spline-card" id="spline-card">
+                <!-- Spotlight that follows cursor -->
+                <div class="spline-spotlight" id="spline-spotlight" aria-hidden="true"></div>
+
+                <div class="spline-inner">
+                    <!-- Left: text content -->
+                    <div class="spline-text-col">
+                        <h2 class="spline-heading">Interactive<br><span class="spline-accent">3D</span></h2>
+                        <p class="spline-desc">
+                            Bring your UI to life with beautiful 3D scenes.<br>
+                            Create immersive experiences that capture attention<br>
+                            and enhance your design.
+                        </p>
+                        <div class="spline-badge">
+                            <span class="status-dot"></span> REAL-TIME RENDER
+                        </div>
+                    </div>
+
+                    <!-- Right: Spline canvas -->
+                    <div class="spline-canvas-col">
+                        <div class="spline-loader" id="spline-loader">
+                            <span class="loader"></span>
+                        </div>
+                        <!-- ✏️ PASTE YOUR SPLINE SCENE URL BELOW -->
+                        <spline-viewer
+                            id="spline-viewer"
+                            url=""
+                        ></spline-viewer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ -->
+    <!--  SECTION 3 — SERVICES / ARSENAL    -->
+    <!-- ═══════════════════════════════════ -->
+    <section id="services" class="section services-section dark-section">
+        <div class="container">
+            <h2 class="section-title" data-reveal>TECHNICAL ARSENAL</h2>
+
+            <ul class="service-list" role="list">
+                <li class="service-item" data-reveal>
+                    <div class="service-num">01</div>
+                    <div class="service-body">
+                        <h3>PENETRATION TESTING</h3>
+                        <p>Network Mapping, Exploit Development, Kali Linux, Burp Suite, Metasploit, CVE Research</p>
+                    </div>
+                    <span class="service-arrow">↗</span>
+                </li>
+                <li class="service-item" data-reveal>
+                    <div class="service-num">02</div>
+                    <div class="service-body">
+                        <h3>SECURE ARCHITECTURE</h3>
+                        <p>Zero-Trust Design, IAM Policies, Cloud Security (AWS/Azure), VPC Hardening</p>
+                    </div>
+                    <span class="service-arrow">↗</span>
+                </li>
+                <li class="service-item" data-reveal>
+                    <div class="service-num">03</div>
+                    <div class="service-body">
+                        <h3>INCIDENT RESPONSE</h3>
+                        <p>SIEM Monitoring, Log Forensics, Threat Hunting, MITRE ATT&CK Framework</p>
+                    </div>
+                    <span class="service-arrow">↗</span>
+                </li>
+                <li class="service-item" data-reveal>
+                    <div class="service-num">04</div>
+                    <div class="service-body">
+                        <h3>AUTOMATION &amp; TOOLING</h3>
+                        <p>Python, Bash Scripting, Docker, CI/CD Security Gates, Custom Tooling</p>
+                    </div>
+                    <span class="service-arrow">↗</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ -->
+    <!--  SECTION 4 — ABOUT ME              -->
+    <!-- ═══════════════════════════════════ -->
+    <section id="about-detail" class="section about-section">
+        <div class="container about-grid">
+            <div class="about-photo-col" data-reveal>
+                <div class="about-photo-frame">
+                    <img src="profile.jpg" alt="Basil Eldhose — Profile">
+                </div>
+            </div>
+            <div class="about-text-col" data-reveal>
+                <h2 class="about-heading">PASSIONATE ABOUT<br>ZERO-TRUST<br>ARCHITECTURE</h2>
+                <p>I am <strong>Basil Eldhose</strong>, a Security Engineer with a deep passion for proactive defense and building resilient systems from the ground up. I specialize in identifying hidden vulnerabilities before malicious actors do.</p>
+                <p>From large-scale network audits to building fully automated incident-response pipelines, my mission is to outmaneuver threats in real time — operating at the speed of zero gravity.</p>
+                <div class="about-tags">
+                    <span>Pen Testing</span><span>Zero-Trust</span><span>Python</span><span>Bash</span>
+                    <span>Cryptography</span><span>Cloud IAM</span><span>SIEM</span><span>Linux</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ -->
+    <!--  SECTION 4.5 — INTERACTIVE WAVES   -->
+    <!-- ═══════════════════════════════════ -->
+    <section id="waves-section" class="section waves-section dark-section">
+        <div class="waves-container" id="waves-container">
+            <svg id="waves-svg" class="waves-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"></svg>
+            <div class="waves-pointer-dot" id="waves-pointer"></div>
+            
+            <!-- Centered content over waves -->
+            <div class="waves-overlay-content">
+                <p class="eyebrow" data-reveal>PULSE OF THE NETWORK</p>
+                <h2 class="waves-heading" data-reveal>DATA<br>STREAMS</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ -->
+    <!--  SECTION 5 — WORK / PROJECTS       -->
+    <!-- ═══════════════════════════════════ -->
+    <section id="work" class="section work-section">
+        <div class="container">
+            <h2 class="section-title" data-reveal>FEATURED PROJECTS</h2>
+
+            <ul class="project-list" role="list">
+                <li class="project-row" data-reveal
+                    data-img="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000">
+                    <div class="project-row-inner">
+                        <span class="project-num">01</span>
+                        <h3 class="project-title">Orbit Scanner</h3>
+                    </div>
+                    <div class="project-meta">
+                        <div class="project-tags"><span>Python</span><span>Bash</span><span>Security</span></div>
+                        <span class="project-type">CYBERSECURITY TOOL</span>
+                    </div>
+                </li>
+                <li class="project-row" data-reveal
+                    data-img="https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=1000">
+                    <div class="project-row-inner">
+                        <span class="project-num">02</span>
+                        <h3 class="project-title">Aegis Protocol</h3>
+                    </div>
+                    <div class="project-meta">
+                        <div class="project-tags"><span>Architecture</span><span>Cloud IAM</span></div>
+                        <span class="project-type">SECURITY RESEARCH</span>
+                    </div>
+                </li>
+                <li class="project-row" data-reveal
+                    data-img="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1000">
+                    <div class="project-row-inner">
+                        <span class="project-num">03</span>
+                        <h3 class="project-title">Gravity Network</h3>
+                    </div>
+                    <div class="project-meta">
+                        <div class="project-tags"><span>WireGuard</span><span>Intrusion Detection</span></div>
+                        <span class="project-type">NETWORK DEFENSE</span>
+                    </div>
+                </li>
+                <li class="project-row" data-reveal
+                    data-img="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=1000">
+                    <div class="project-row-inner">
+                        <span class="project-num">04</span>
+                        <h3 class="project-title">Crypto Vault</h3>
+                    </div>
+                    <div class="project-meta">
+                        <div class="project-tags"><span>Rust</span><span>Cryptography</span></div>
+                        <span class="project-type">DATA ENCRYPTION</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Floating project image that follows cursor -->
+        <div id="project-img-preview" aria-hidden="true"></div>
+    </section>
+
+    <!-- ── MARQUEE TICKER ── -->
+    <div class="ticker-wrap dark-section">
+        <div class="ticker-track">
+            <span class="ticker-word">EXCELLENCE</span>
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-word">INNOVATION</span>
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-word">PRECISION</span>
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-word">TRUST</span>
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-word">EXCELLENCE</span>
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-word">INNOVATION</span>
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-word">PRECISION</span>
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-word">TRUST</span>
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-word">EXCELLENCE</span>
+            <span class="ticker-sep">✦</span>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!--  SECTION 6 — CONTACT & FOOTER      -->
+    <!-- ═══════════════════════════════════ -->
+    <footer id="contact" class="section footer-section dark-section">
+        <div class="container">
+            <p class="footer-cta-quote" data-reveal>
+                "Let's build a memorable &amp; inspiring<br>cybersecurity posture together."
+            </p>
+            <div class="footer-contact-block" data-reveal>
+                <h2 class="footer-big-title">CONTACT US</h2>
+                <div class="footer-links">
+                    <a href="mailto:basil@example.com" class="footer-contact-link">basil@example.com</a>
+                    <a href="tel:+919496002311" class="footer-contact-link">+91 9496002311</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/Basileldhose429" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/basil-eldhose-74204537b" target="_blank">LinkedIn</a>
+                    <a href="https://www.instagram.com/1__basil_eldhose__1" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-tagline">JUST IMAGINE, I SECURE IT</div>
+        </div>
+    </footer>
+
+    <!-- Hidden SVG Glass Filter (used by liquid-btn via backdropFilter) -->
+    <svg class="liquid-svg-defs" aria-hidden="true">
+        <defs>
+            <filter id="container-glass" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                <feTurbulence type="fractalNoise" baseFrequency="0.05 0.05" numOctaves="1" seed="1" result="turbulence"/>
+                <feGaussianBlur in="turbulence" stdDeviation="2" result="blurredNoise"/>
+                <feDisplacementMap in="SourceGraphic" in2="blurredNoise" scale="70" xChannelSelector="R" yChannelSelector="B" result="displaced"/>
+                <feGaussianBlur in="displaced" stdDeviation="4" result="finalBlur"/>
+                <feComposite in="finalBlur" in2="finalBlur" operator="over"/>
+            </filter>
+        </defs>
+    </svg>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    <script>
+/* ─────────────────────────────────────────
+   GSAP Registration
+───────────────────────────────────────── */
+gsap.registerPlugin(ScrollTrigger);
+
+/* ─────────────────────────────────────────
+   CUSTOM CURSOR
+───────────────────────────────────────── */
+const cursor   = document.getElementById('cursor');
+const follower = document.getElementById('cursor-follower');
+let mouseX = 0, mouseY = 0;
+let followerX = 0, followerY = 0;
+
+document.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    gsap.to(cursor, { x: mouseX, y: mouseY, duration: 0.08 });
+});
+
+// Smooth follower
+(function animateFollower() {
+    followerX += (mouseX - followerX) * 0.1;
+    followerY += (mouseY - followerY) * 0.1;
+    gsap.set(follower, { x: followerX, y: followerY });
+    requestAnimationFrame(animateFollower);
+})();
+
+/* ─────────────────────────────────────────
+   LOADER  0% → 100%
+───────────────────────────────────────── */
+const loaderEl   = document.getElementById('loader');
+const loaderNum  = document.getElementById('loader-num');
+const loaderFill = document.getElementById('loader-fill');
+
+const bootMessages = [
+    "Initializing secure kernel…",
+    "Decrypting payloads…",
+    "Loading threat models…",
+    "Bypassing firewalls…",
+    "Mapping attack surface…",
+    "Boot sequence complete."
+];
+
+let progress  = 0;
+let msgIndex  = 0;
+const loaderInterval = setInterval(() => {
+    progress += Math.random() * 14;
+    if (progress >= 100) {
+        progress = 100;
+        clearInterval(loaderInterval);
+
+        // Brief pause then dismiss loader
+        setTimeout(() => {
+            loaderEl.classList.add('out');
+            setTimeout(() => loaderEl.remove(), 700);
+
+            // Animate hero elements in after loader disappears
+            gsap.from('.hero-name', { y: 60, opacity: 0, duration: 1.2, ease: 'power4.out', delay: 0.2 });
+            gsap.from('.badge', { y: 40, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.4 });
+            gsap.from('.hero-portrait-wrap', { scale: 0.9, opacity: 0, duration: 1.4, ease: 'power3.out', delay: 0.1 });
+
+            // Refresh ScrollTrigger after DOM settles
+            setTimeout(() => ScrollTrigger.refresh(), 500);
+        }, 400);
+    }
+
+    loaderNum.textContent  = Math.floor(progress);
+    loaderFill.style.width = progress + '%';
+
+    // Cycle boot messages
+    const msgStep = Math.floor(progress / (100 / bootMessages.length));
+    if (msgStep > msgIndex && msgIndex < bootMessages.length) {
+        msgIndex = msgStep;
+    }
+}, 110);
+
+/* ─────────────────────────────────────────
+   HAMBURGER / NAV OVERLAY
+───────────────────────────────────────── */
+const hamburger  = document.getElementById('hamburger');
+const navOverlay = document.getElementById('nav-overlay');
+const navLinks   = document.querySelectorAll('.nav-link-item');
+
+hamburger.addEventListener('click', () => {
+    const isOpen = navOverlay.classList.toggle('open');
+    hamburger.classList.toggle('active', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+    navOverlay.setAttribute('aria-hidden', !isOpen);
+});
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navOverlay.classList.remove('open');
+        hamburger.classList.remove('active');
+    });
+});
+
+/* ─────────────────────────────────────────
+   SPIDER-MAN MASK REVEAL  (clip-path circle)
+───────────────────────────────────────── */
+const portraitWrap = document.getElementById('portrait-wrap');
+const maskLayer    = document.getElementById('mask-layer');
+
+if (portraitWrap && maskLayer) {
+    portraitWrap.addEventListener('mousemove', e => {
+        const { left, top } = portraitWrap.getBoundingClientRect();
+        const x = e.clientX - left;
+        const y = e.clientY - top;
+
+        // Iron Man gold tint: warm amber-gold overlay
+        const radius = 130;
+        gsap.to(maskLayer, {
+            clipPath: `circle(${radius}px at ${x}px ${y}px)`,
+            duration: 0.55,
+            ease: 'power3.out'
+        });
+    });
+
+    portraitWrap.addEventListener('mouseleave', () => {
+        gsap.to(maskLayer, {
+            clipPath: 'circle(0px at 50% 50%)',
+            duration: 0.9,
+            ease: 'power3.out'
+        });
+    });
+}
+
+/* ─────────────────────────────────────────
+   FLOATING KEYWORD PARALLAX (scroll-based)
+───────────────────────────────────────── */
+const floaters = document.querySelectorAll('.float-cloud span');
+floaters.forEach((el, i) => {
+    const depth = (i % 3) + 1;
+    gsap.to(el, {
+        y: `-=${depth * 80}`,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '.intro-section',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: depth * 0.8
+        }
+    });
+});
+
+/* ─────────────────────────────────────────
+   SCROLL REVEAL  (data-reveal via GSAP)
+───────────────────────────────────────── */
+gsap.utils.toArray('[data-reveal]').forEach((el, i) => {
+    gsap.fromTo(el,
+        { opacity: 0, y: 60 },
+        {
+            opacity: 1, y: 0,
+            duration: 1,
+            delay: (i % 3) * 0.15,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 88%',
+                toggleActions: 'play none none none'
+            }
+        }
+    );
+});
+
+/* ─────────────────────────────────────────
+   PROJECT HOVER IMAGE PREVIEW
+───────────────────────────────────────── */
+const projectRows    = document.querySelectorAll('.project-row');
+const imgPreview     = document.getElementById('project-img-preview');
+let previewRAF;
+
+projectRows.forEach(row => {
+    const imgUrl = row.getAttribute('data-img');
+
+    row.addEventListener('mouseenter', () => {
+        if (!imgUrl) return;
+        imgPreview.style.backgroundImage = `url(${imgUrl})`;
+        imgPreview.classList.add('shown');
+    });
+
+    row.addEventListener('mouseleave', () => {
+        imgPreview.classList.remove('shown');
+    });
+
+    row.addEventListener('mousemove', e => {
+        cancelAnimationFrame(previewRAF);
+        previewRAF = requestAnimationFrame(() => {
+            gsap.to(imgPreview, {
+                x: e.clientX + 30,
+                y: e.clientY - 125,
+                duration: 0.6,
+                ease: 'power2.out'
+            });
+        });
+    });
+});
+
+/* ─────────────────────────────────────────
+   GSAP HERO TEXT  (glitch flicker on load)
+───────────────────────────────────────── */
+function glitchHero() {
+    const heroName = document.querySelector('.hero-name');
+    if (!heroName) return;
+    const tl = gsap.timeline({ repeat: -1, repeatDelay: 4 });
+    tl.to(heroName, { x: -4, duration: 0.05, ease: 'steps(1)' })
+      .to(heroName, { x: 4, duration: 0.05, ease: 'steps(1)' })
+      .to(heroName, { x: 0, duration: 0.05, ease: 'steps(1)' })
+      .to(heroName, { x: -2, duration: 0.03, ease: 'steps(1)', delay: 0.1 })
+      .to(heroName, { x: 0, duration: 0.03, ease: 'steps(1)' });
+}
+setTimeout(glitchHero, 3000);
+
+/* ═════════════════════════════════════════
+   ██  HACKER EXTRAS JS  ██
+═════════════════════════════════════════ */
+
+/* ── LIVE CLOCK in hero corner ── */
+const heroClock = document.getElementById('hero-clock');
+function updateClock() {
+    if (!heroClock) return;
+    const now = new Date();
+    const hh = String(now.getHours()).padStart(2,'0');
+    const mm = String(now.getMinutes()).padStart(2,'0');
+    const ss = String(now.getSeconds()).padStart(2,'0');
+    heroClock.textContent = `${hh}:${mm}:${ss}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+/* ── LIVE HEX TICKER in header ── */
+const hexTickerEl = document.getElementById('hex-ticker');
+const hexMessages = [
+    'SYS_OK', 'CONN_SECURE', 'THREAT::NONE', 'AUTH_OK',
+    'SCAN_ACTIVE', 'FW_ENABLED', 'PKT_SNIFF::OFF', 'ZERO_TRUST::ON'
+];
+let hexMsgIdx = 0;
+function updateHexTicker() {
+    if (!hexTickerEl) return;
+    const hex = '0x' + Math.floor(Math.random() * 0xFFFF).toString(16).toUpperCase().padStart(4,'0');
+    hexTickerEl.textContent = `${hex} :: ${hexMessages[hexMsgIdx % hexMessages.length]}`;
+    hexMsgIdx++;
+}
+setInterval(updateHexTicker, 2000);
+
+/* ── BOOT LOG during loader ── */
+const bootLog = document.getElementById('loader-boot-log');
+const loaderHex = document.getElementById('loader-hex');
+const hackerBootLines = [
+    { text: '> AUTH MODULE LOADED', cls: 'ok' },
+    { text: '> KERNEL v2.5.1 INITIALIZED', cls: 'ok' },
+    { text: '> LOADING THREAT DATABASE...', cls: '' },
+    { text: '> CVE SCAN: 0 CRITICAL', cls: 'ok' },
+    { text: '> FIREWALL ENABLED', cls: 'ok' },
+    { text: '> DECRYPTING PAYLOAD...', cls: '' },
+    { text: '> ZERO-TRUST: ACTIVE', cls: 'ok' },
+    { text: '> ALL SYSTEMS NOMINAL', cls: 'ok' },
+];
+let bootLineIdx = 0;
+const bootLogInterval = setInterval(() => {
+    if (!bootLog || bootLineIdx >= hackerBootLines.length) {
+        clearInterval(bootLogInterval);
+        return;
+    }
+    const line = hackerBootLines[bootLineIdx];
+    const span = document.createElement('span');
+    span.textContent = line.text;
+    if (line.cls) span.classList.add(line.cls);
+    bootLog.appendChild(span);
+    bootLineIdx++;
+
+    // Also update hex display
+    if (loaderHex) {
+        loaderHex.textContent = '0x' + Math.floor(Math.random() * 0xFFFF)
+            .toString(16).toUpperCase().padStart(4,'0');
+    }
+}, 600);
+
+/* ── RANDOM GLITCH BAR that flickers across screen ── */
+const glitchBar = document.getElementById('glitch-bar');
+function triggerGlitchBar() {
+    if (!glitchBar) return;
+    const y = Math.random() * window.innerHeight;
+    glitchBar.style.top = y + 'px';
+    glitchBar.style.opacity = '1';
+    glitchBar.style.height = (Math.random() * 4 + 1) + 'px';
+    setTimeout(() => {
+        glitchBar.style.opacity = '0';
+    }, 80 + Math.random() * 80);
+}
+setInterval(triggerGlitchBar, 3000 + Math.random() * 5000);
+// Random extra flash
+setInterval(() => {
+    if (Math.random() > 0.6) triggerGlitchBar();
+}, 7000);
+
+/* ── BINARY STRIP — randomize content periodically ── */
+const binaryStripEl = document.getElementById('binary-strip');
+function randomByte() {
+    return Math.floor(Math.random() * 256).toString(2).padStart(8, '0');
+}
+function refreshBinaryStrip() {
+    if (!binaryStripEl) return;
+    const bytes = Array.from({ length: 20 }, randomByte).join(' ');
+    binaryStripEl.textContent = bytes;
+}
+setInterval(refreshBinaryStrip, 3000);
+
+/* ═══════════════════════════════════════════
+   ██  SPLINE 3D — SPOTLIGHT + LOADER  ██
+════════════════════════════════════════════ */
+
+/* Mouse-following spotlight inside the Spline card */
+const splineCard      = document.getElementById('spline-card');
+const splineSpotlight = document.getElementById('spline-spotlight');
+
+if (splineCard && splineSpotlight) {
+    splineCard.addEventListener('mousemove', e => {
+        const { left, top } = splineCard.getBoundingClientRect();
+        const x = e.clientX - left;
+        const y = e.clientY - top;
+        splineSpotlight.style.left = x + 'px';
+        splineSpotlight.style.top  = y + 'px';
+    });
+}
+
+/* Hide the spinner once the spline-viewer fires its 'load' event */
+const splineViewer = document.getElementById('spline-viewer');
+const splineLoader = document.getElementById('spline-loader');
+
+if (splineViewer && splineLoader) {
+    splineViewer.addEventListener('load', () => {
+        splineLoader.classList.add('hidden');
+        // Remove after fade-out so it doesn't intercept pointer events
+        setTimeout(() => splineLoader.remove(), 600);
+    });
+
+    // Fallback: hide loader after 12 seconds even if 'load' doesn't fire
+    setTimeout(() => {
+        if (splineLoader && splineLoader.parentNode) {
+            splineLoader.classList.add('hidden');
+        }
+    }, 12000);
+}
+
+/* ═══════════════════════════════════════════
+   ██  SHADER LINES — Three.js  ██
+════════════════════════════════════════════ */
+(function initShader() {
+    const container = document.getElementById('shader-canvas');
+    if (!container) return;
+
+    // Load Three.js r89 from CDN (matches the original React component)
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js';
+    script.onload = () => startShader(container);
+    document.head.appendChild(script);
+
+    function startShader(container) {
+        if (!window.THREE) return;
+        const THREE = window.THREE;
+
+        // --- Camera & Scene ---
+        const camera = new THREE.Camera();
+        camera.position.z = 1;
+        const scene  = new THREE.Scene();
+
+        // --- Geometry ---
+        const geometry = new THREE.PlaneBufferGeometry(2, 2);
+
+        // --- Uniforms ---
+        const uniforms = {
+            time:       { type: 'f',  value: 1.0 },
+            resolution: { type: 'v2', value: new THREE.Vector2() }
+        };
+
+        // --- Vertex Shader ---
+        const vertexShader = `
+            void main() {
+                gl_Position = vec4(position, 1.0);
+            }
+        `;
+
+        // --- Fragment Shader (exact port from React component) ---
+        const fragmentShader = `
+            #define TWO_PI 6.2831853072
+            #define PI 3.14159265359
+
+            precision highp float;
+            uniform vec2  resolution;
+            uniform float time;
+
+            float random(in float x) {
+                return fract(sin(x) * 1e4);
+            }
+            float random(vec2 st) {
+                return fract(sin(dot(st.xy, vec2(12.9898, 78.233))) * 43758.5453123);
+            }
+
+            varying vec2 vUv;
+
+            void main(void) {
+                vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
+
+                vec2 fMosaicScal  = vec2(4.0, 2.0);
+                vec2 vScreenSize  = vec2(256.0, 256.0);
+                uv.x = floor(uv.x * vScreenSize.x / fMosaicScal.x) / (vScreenSize.x / fMosaicScal.x);
+                uv.y = floor(uv.y * vScreenSize.y / fMosaicScal.y) / (vScreenSize.y / fMosaicScal.y);
+
+                float t = time * 0.06 + random(uv.x) * 0.4;
+                float lineWidth = 0.0008;
+
+                vec3 color = vec3(0.0);
+                for (int j = 0; j < 3; j++) {
+                    for (int i = 0; i < 5; i++) {
+                        color[j] += lineWidth * float(i * i) /
+                            abs(fract(t - 0.01 * float(j) + float(i) * 0.01) * 1.0 - length(uv));
+                    }
+                }
+
+                gl_FragColor = vec4(color[2], color[1], color[0], 1.0);
+            }
+        `;
+
+        // --- Material & Mesh ---
+        const material = new THREE.ShaderMaterial({
+            uniforms,
+            vertexShader,
+            fragmentShader
+        });
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        // --- Renderer ---
+        const renderer = new THREE.WebGLRenderer({ antialias: false });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        container.appendChild(renderer.domElement);
+
+        // --- Resize handler ---
+        function onResize() {
+            const w = container.clientWidth;
+            const h = container.clientHeight;
+            renderer.setSize(w, h);
+            uniforms.resolution.value.set(renderer.domElement.width, renderer.domElement.height);
+        }
+        onResize();
+        window.addEventListener('resize', onResize, { passive: true });
+
+        // --- Animation loop (pause when section is off-screen) ---
+        let rafId = null;
+        let running = false;
+
+        function animate() {
+            rafId = requestAnimationFrame(animate);
+            uniforms.time.value += 0.05;
+            renderer.render(scene, camera);
+        }
+
+        // Use IntersectionObserver to save GPU when section is not visible
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting && !running) {
+                running = true;
+                animate();
+            } else if (!entry.isIntersecting && running) {
+                running = false;
+                cancelAnimationFrame(rafId);
+            }
+        }, { rootMargin: '200px' });
+
+        observer.observe(document.getElementById('shader-section'));
+    }
+})();
+
+// ════════════════════════════════════════════════════════
+//   WAVES BACKGROUND ANIMATION
+// ════════════════════════════════════════════════════════
+(function initWaves() {
+    const container = document.getElementById('waves-container');
+    const svg = document.getElementById('waves-svg');
+    if (!container || !svg || typeof SimplexNoise === 'undefined') return;
+
+    // Use global simplex (from the CDN script, it exposes window.simplexNoise)
+    // The library we loaded exposes window.simplexNoise
+    let noise2D;
+    // Check if it's the 2.x API (SimplexNoise constructor) or 3.x+ API (createNoise2D)
+    if (typeof SimplexNoise === 'function') {
+        const simplexInst = new SimplexNoise();
+        noise2D = (x, y) => simplexInst.noise2D(x, y);
+    } else {
+        // Fallback or generic
+        noise2D = (x, y) => Math.sin(x) * Math.cos(y); // Simple fallback, shouldn't happen with the CDN we used
+    }
+
+    let bounding = container.getBoundingClientRect();
+    let paths = [];
+    let lines = [];
+    let rafId = null;
+
+    const mouse = {
+        x: -10, y: 0, lx: 0, ly: 0, sx: 0, sy: 0,
+        v: 0, vs: 0, a: 0, set: false,
+    };
+
+    function setSize() {
+        bounding = container.getBoundingClientRect();
+        svg.style.width = bounding.width + 'px';
+        svg.style.height = bounding.height + 'px';
+    }
+
+    function setLines() {
+        const width = bounding.width;
+        const height = bounding.height;
+        lines = [];
+        paths.forEach(p => p.remove());
+        paths = [];
+
+        const xGap = 8;
+        const yGap = 8;
+        const oWidth = width + 200;
+        const oHeight = height + 30;
+
+        const totalLines = Math.ceil(oWidth / xGap);
+        const totalPoints = Math.ceil(oHeight / yGap);
+        const xStart = (width - xGap * totalLines) / 2;
+        const yStart = (height - yGap * totalPoints) / 2;
+
+        for (let i = 0; i < totalLines; i++) {
+            const points = [];
+            for (let j = 0; j < totalPoints; j++) {
+                points.push({
+                    x: xStart + xGap * i,
+                    y: yStart + yGap * j,
+                    wave: { x: 0, y: 0 },
+                    cursor: { x: 0, y: 0, vx: 0, vy: 0 }
+                });
+            }
+
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.classList.add('a__line', 'js-line');
+            path.setAttribute('fill', 'none');
+            // Hardcode bright white lines similar to the component props
+            path.setAttribute('stroke', 'rgba(255, 255, 255, 0.4)');
+            path.setAttribute('stroke-width', '1');
+
+            svg.appendChild(path);
+            paths.push(path);
+            lines.push(points);
+        }
+    }
+
+    function updateMousePosition(x, y) {
+        mouse.x = x - bounding.left;
+        mouse.y = y - bounding.top + window.scrollY;
+
+        if (!mouse.set) {
+            mouse.sx = mouse.x;
+            mouse.sy = mouse.y;
+            mouse.lx = mouse.x;
+            mouse.ly = mouse.y;
+            mouse.set = true;
+        }
+
+        container.style.setProperty('--x', `${mouse.sx}px`);
+        container.style.setProperty('--y', `${mouse.sy}px`);
+    }
+
+    function movePoints(time) {
+        lines.forEach(points => {
+            points.forEach(p => {
+                const move = noise2D((p.x + time * 0.008) * 0.003, (p.y + time * 0.003) * 0.002) * 8;
+                p.wave.x = Math.cos(move) * 12;
+                p.wave.y = Math.sin(move) * 6;
+
+                const dx = p.x - mouse.sx;
+                const dy = p.y - mouse.sy;
+                const d = Math.hypot(dx, dy);
+                const l = Math.max(175, mouse.vs);
+
+                if (d < l) {
+                    const s = 1 - d / l;
+                    const f = Math.cos(d * 0.001) * s;
+                    p.cursor.vx += Math.cos(mouse.a) * f * l * mouse.vs * 0.00035;
+                    p.cursor.vy += Math.sin(mouse.a) * f * l * mouse.vs * 0.00035;
+                }
+
+                p.cursor.vx += (0 - p.cursor.x) * 0.01;
+                p.cursor.vy += (0 - p.cursor.y) * 0.01;
+                p.cursor.vx *= 0.95;
+                p.cursor.vy *= 0.95;
+                p.cursor.x += p.cursor.vx;
+                p.cursor.y += p.cursor.vy;
+                p.cursor.x = Math.min(50, Math.max(-50, p.cursor.x));
+                p.cursor.y = Math.min(50, Math.max(-50, p.cursor.y));
+            });
+        });
+    }
+
+    function drawLines() {
+        lines.forEach((points, lIndex) => {
+            if (points.length < 2 || !paths[lIndex]) return;
+
+            const fp = points[0];
+            const fx = fp.x + fp.wave.x;
+            const fy = fp.y + fp.wave.y;
+            let d = `M ${fx} ${fy}`;
+
+            for (let i = 1; i < points.length; i++) {
+                const p = points[i];
+                const x = p.x + p.wave.x + p.cursor.x;
+                const y = p.y + p.wave.y + p.cursor.y;
+                d += `L ${x} ${y}`;
+            }
+            paths[lIndex].setAttribute('d', d);
+        });
+    }
+
+    function tick(time) {
+        mouse.sx += (mouse.x - mouse.sx) * 0.1;
+        mouse.sy += (mouse.y - mouse.sy) * 0.1;
+
+        const dx = mouse.x - mouse.lx;
+        const dy = mouse.y - mouse.ly;
+        const d = Math.hypot(dx, dy);
+
+        mouse.v = d;
+        mouse.vs += (d - mouse.vs) * 0.1;
+        mouse.vs = Math.min(100, mouse.vs);
+
+        mouse.lx = mouse.x;
+        mouse.ly = mouse.y;
+        mouse.a = Math.atan2(dy, dx);
+
+        container.style.setProperty('--x', `${mouse.sx}px`);
+        container.style.setProperty('--y', `${mouse.sy}px`);
+
+        movePoints(time);
+        drawLines();
+
+        rafId = requestAnimationFrame(tick);
+    }
+
+    // Init and listeners
+    setSize();
+    setLines();
+
+    window.addEventListener('resize', () => { setSize(); setLines(); });
+    window.addEventListener('mousemove', e => updateMousePosition(e.pageX, e.pageY));
+    container.addEventListener('touchmove', e => {
+        const t = e.touches[0];
+        updateMousePosition(t.clientX, t.clientY);
+    }, { passive: false });
+
+    rafId = requestAnimationFrame(tick);
+})();
+
+</script>
+</body>
+</html>
+
