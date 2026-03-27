@@ -10,14 +10,14 @@ const chat = createAgentChat({
 })
 
 export function ChatComponent() {
-  const { messages, sendMessage, status, stop, error } = useChat({ chat })
+  const { messages, append, status, stop, error } = useChat({ chat })
 
   return (
     <div className="w-full h-[600px] mt-8 rounded-xl overflow-hidden border border-white/10">
       <AgentChat
         messages={messages}
         onSend={(msg) =>
-          sendMessage({ parts: [{ type: "text", text: msg.content }] })
+          append({ role: "user", content: msg.content })
         }
         status={status}
         onStop={stop}
