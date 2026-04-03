@@ -10,6 +10,9 @@
 </head>
 <body>
 
+    <!-- Background Music -->
+    <audio id="bg-music" src="music.mp3" autoplay loop></audio>
+
     <!-- Custom Cursor -->
     <div id="cursor"></div>
     <div id="cursor-follower"></div>
@@ -63,9 +66,14 @@
             <span class="status-dot"></span>
             <span id="hex-ticker">0xBE :: SYS_OK</span>
         </div>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
+        <div class="header-controls" style="display: flex; align-items: center; gap: 24px;">
+            <button id="sound-toggle" class="sound-toggle" aria-label="Toggle sound" style="background:none; border:none; color:inherit; font-size:1.4rem; filter:drop-shadow(0 0 5px rgba(232,160,32,0.8)); transition: opacity 0.3s; padding: 4px;">
+                <span class="sound-icon" id="sound-icon">🔇</span>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
 
     <!-- ═══════════════════════════════════ -->
@@ -629,6 +637,54 @@ setTimeout(glitchHero, 3000);
 /* ═════════════════════════════════════════
    ██  HACKER EXTRAS JS  ██
 ═════════════════════════════════════════ */
+
+/* ── BACKGROUND MUSIC AUTOPLAY LOGIC ── */
+const bgMusic = document.getElementById('bg-music');
+const soundToggle = document.getElementById('sound-toggle');
+const soundIcon = document.getElementById('sound-icon');
+let isMusicPlaying = false;
+
+function toggleMusic() {
+    if (!bgMusic) return;
+    if (isMusicPlaying) {
+        bgMusic.pause();
+        if (soundIcon) soundIcon.textContent = '🔇';
+        isMusicPlaying = false;
+    } else {
+        bgMusic.play().then(() => {
+            if (soundIcon) soundIcon.textContent = '🔊';
+            isMusicPlaying = true;
+        }).catch(err => {
+            console.log('Audio play blocked or failed:', err);
+        });
+    }
+}
+
+if (soundToggle) {
+    soundToggle.addEventListener('click', toggleMusic);
+}
+
+// Attempt aggressive autoplay
+function attemptAutoplay() {
+    if (!isMusicPlaying && bgMusic && bgMusic.paused) {
+        bgMusic.play().then(() => {
+            if (soundIcon) soundIcon.textContent = '🔊';
+            isMusicPlaying = true;
+        }).catch(() => {
+            console.log("Autoplay blocked by browser. Using interaction fallback.");
+        });
+    }
+}
+
+window.addEventListener('load', attemptAutoplay);
+
+// Interaction fallback for browsers blocking silent autoplay
+document.body.addEventListener('click', () => {
+    if (!isMusicPlaying && bgMusic && bgMusic.paused) {
+        toggleMusic();
+    }
+}, { once: true });
+
 
 /* ── LIVE CLOCK in hero corner ── */
 const heroClock = document.getElementById('hero-clock');
